@@ -13,36 +13,36 @@ My GitHub repo provides a step-by-step guide on building and deploying a LangGra
 
 ## Step 1: Setup of Semantic Workbench's backend
 1. Ensure that your Windows 11's _execution policies_ are set correctly to allow the installation of necessary tools.
-``` Shell
+``` PowerShell
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 Get-ExecutionPolicy -List
 ```
 2. Install _Scoop_. Scoop is a command-line installer for Windows, that simplifies the installation of software by handling dependencies and configurations.
-``` Shell
+``` PowerShell
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
 3. After installing Scoop, reset the _execution policies_ to their default state.
-``` Shell
+``` PowerShell
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Undefined
 Get-ExecutionPolicy -List
 ```
 4. Use Scoop to install the necessary dependencies for the backend. This includes _Python_, _Poetry_ (a dependency management tool) and _Make_ (a build automation tool).
-``` Shell
+``` PowerShell
 scoop bucket add versions
 scoop install python311
 scoop install poetry
 scoop install make
 ```
 5. Navigate to the backend directory (**_semantic-workbench/v1/services_**) and use _Make_ to install the backend services.
-``` Shell
+``` PowerShell
 make
 ```
 6. Activate the Python virtual environment to ensure that the correct dependencies are used.
-``` Shell
+``` PowerShell
 .venv\Scripts\activate.bat
 ```
 7. Start the backend service to make it operational.
-``` Shell
+``` PowerShell
 start-semantic-workbench-service
 ```
 
