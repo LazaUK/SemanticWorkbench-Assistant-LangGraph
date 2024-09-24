@@ -2,9 +2,9 @@
 
 [Semantic Workbench](https://github.com/microsoft/semanticworkbench) is an open-source platform developed by Microsoft, designed to simplify the prototyping and development of intelligent assistants. It consists of a _backend service_, a _frontend user interface_ (UI) and multiple _assistant services_. The platform is highly adaptable and can support wide range of use cases from research to business applications and collaborative development.
 
-This GitHub repo provides a step-by-step guide on building and deploying a LangGraph-based assistant within the Semantic Workbench environment. It includes code examples and explanations of some key concepts. LangGraph-based assistant example demonstrates a specific use case: searching for and analysing arXiv publications to support the research process.
+My GitHub repo provides a step-by-step guide on building and deploying a LangGraph-based assistant within the Semantic Workbench environment. It includes code examples and explanations of some key concepts. LangGraph-based assistant example demonstrates a specific use case: searching for and analysing arXiv publications to support the research process.
 
-> Note: This step-by-step guide assumes that you have cloned the source code of Semantic Workbench from its official repo (https://github.com/microsoft/semanticworkbench) and using it on a Windows 11 machine.
+> Note: This step-by-step guide assumes that you have cloned the source code of Semantic Workbench **_v1_** from its official repo (https://github.com/microsoft/semanticworkbench) and using it on a Windows 11 machine.
 
 ## Table of contents:
 - [Step 1: Setup of Semantic Workbench's backend](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-1-setup-of-semantic-workbenchs-backend)
@@ -32,7 +32,7 @@ scoop install python311
 scoop install poetry
 scoop install make
 ```
-5. Navigate to the backend directory (**semantic-workbench/v1/services**) and use _Make_ to install the backend services.
+5. Navigate to the backend directory (**_semantic-workbench/v1/services_**) and use _Make_ to install the backend services.
 ``` Shell
 make
 ```
@@ -40,7 +40,7 @@ make
 ``` Shell
 .venv\Scripts\activate.bat
 ```
-8. Start the backend service to make it operational.
+7. Start the backend service to make it operational.
 ``` Shell
 start-semantic-workbench-service
 ```
@@ -50,11 +50,11 @@ start-semantic-workbench-service
 ``` Shell
 scoop install nodejs-lts
 ```
-2. Navigate to the frontend directory (**semantic-workbench/v1/app**) and install the necessary dependencies using _npm_ (Node Package Manager).
+2. Navigate to the frontend directory (**_semantic-workbench/v1/app_**) and install the necessary dependencies using _npm_ (Node Package Manager).
 ``` Shell
 npm install
 ```
-9.	Start the frontend service to make it operational.
+3.	Start the frontend service to make it operational.
 ``` Shell
 npm start
 ```
