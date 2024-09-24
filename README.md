@@ -56,7 +56,7 @@ scoop install nodejs-lts
 npm install
 ```
 3.	Start the frontend service to make it operational.
-``` NPM
+``` PowerShell
 npm start
 ```
 
