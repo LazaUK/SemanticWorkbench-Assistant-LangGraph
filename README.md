@@ -4,13 +4,15 @@
 
 My GitHub repo provides a step-by-step guide on building and deploying a LangGraph-based assistant within the Semantic Workbench environment. It includes code examples and explanations of some key concepts. This assistant example demonstrates a specific use case: searching for and analysing arXiv publications to support the research process.
 
+> Note: These instructions assume that you have cloned and are using the source code of Semantic Workbench from its official repo: https://github.com/microsoft/semanticworkbench.
+
 ## Table of contents:
 - [Step 1: Setup of Semantic Workbench's backend]()
 - [Step 2: Setup of Semantic Workbench's frontend]()
-- [Step 3: Customisation of LangGraph arXiv assistant]()
+- [Step 3: Deployment of LangGraph arXiv assistant]()
 
 ## Step 1: Setup of Semantic Workbench's backend
 
 ## Step 2: Setup of Semantic Workbench's frontend
 
-## Step 3: Customisation of LangGraph arXiv assistant
+## Step 3: Deployment of LangGraph arXiv assistant
