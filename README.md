@@ -12,42 +12,35 @@ My GitHub repo provides a step-by-step guide on building and deploying a LangGra
 - [Step 3: Deployment of LangGraph arXiv assistant]()
 
 ## Step 1: Setup of Semantic Workbench's backend
-1.	Check Windows 11's execution policies:
-Ensure that your system's _execution policies_ are set correctly to allow the installation of necessary tools.
+1. Ensure that your Windows 11's _execution policies_ are set correctly to allow the installation of necessary tools.
 ``` Shell
 Get-ExecutionPolicy -List
 ```
-2.	Install Scoop:
-_Scoop_ is a command-line installer for Windows. It simplifies the installation of software by handling dependencies and configurations.
+2. Install _Scoop_. Scoop is a command-line installer for Windows, that simplifies the installation of software by handling dependencies and configurations.
 ``` Shell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
-3.	Re-set execution policies:
-After installing Scoop, reset the execution policies to their default state.
+3. After installing Scoop, reset the execution policies to their default state.
 ``` Shell
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Undefined
 ```
-4.	Install Python dependencies:
-Use Scoop to install the necessary dependencies for the backend. This includes **Python**, _Poetry_ (a dependency management tool) and _Make_ (a build automation tool).
+4. Use Scoop to install the necessary dependencies for the backend. This includes _Python_, _Poetry_ (a dependency management tool) and _Make_ (a build automation tool).
 ``` Shell
 scoop bucket add versions
 scoop install python311
 scoop install poetry
 scoop install make
 ```
-5.	Install backend in **semantic-workbench/v1/services**:
-Navigate to the backend directory and use Make to install the backend services.
+5. Navigate to the backend directory (**semantic-workbench/v1/services**) and use Make to install the backend services.
 ``` Shell
 make
 ```
-6.	Activate Python environment:
-Activate the Python virtual environment to ensure that the correct dependencies are used.
+6. Activate the Python virtual environment to ensure that the correct dependencies are used.
 ``` Shell
 .venv\Scripts\activate.bat
 ```
-8.	Start backend service:
-Start the backend service to make it operational.
+8. Start the backend service to make it operational.
 ``` Shell
 start-semantic-workbench-service
 ```
