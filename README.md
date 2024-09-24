@@ -48,15 +48,15 @@ start-semantic-workbench-service
 
 ## Step 2: Setup of Semantic Workbench's frontend
 1. _Node.js_ is a JavaScript runtime used for building and running the frontend. Install **Node.js v20** using Scoop.
-``` Shell
+``` PowerShell
 scoop install nodejs-lts
 ```
 2. Navigate to the frontend directory (**_semantic-workbench/v1/app_**) and install the necessary dependencies using _npm_ (Node Package Manager).
-``` Shell
+``` PowerShell
 npm install
 ```
 3.	Start the frontend service to make it operational.
-``` Shell
+``` PowerShell
 npm start
 ```
 
