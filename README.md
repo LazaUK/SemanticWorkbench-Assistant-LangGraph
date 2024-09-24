@@ -7,7 +7,7 @@ My GitHub repo provides a step-by-step guide on building and deploying a LangGra
 > Note: This step-by-step guide assumes that you have cloned the source code of Semantic Workbench from its official repo (https://github.com/microsoft/semanticworkbench) and using it on a Windows 11 machine.
 
 ## Table of contents:
-- [Step 1: Setup of Semantic Workbench's backend]()
+- [Step 1: Setup of Semantic Workbench's backend](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-1-setup-of-semantic-workbenchs-backend)
 - [Step 2: Setup of Semantic Workbench's frontend]()
 - [Step 3: Deployment of LangGraph arXiv assistant]()
 
@@ -21,7 +21,7 @@ Get-ExecutionPolicy -List
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
-3. After installing Scoop, reset the execution policies to their default state.
+3. After installing Scoop, reset the _execution policies_ to their default state.
 ``` Shell
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Undefined
 ```
@@ -32,7 +32,7 @@ scoop install python311
 scoop install poetry
 scoop install make
 ```
-5. Navigate to the backend directory (**semantic-workbench/v1/services**) and use Make to install the backend services.
+5. Navigate to the backend directory (**semantic-workbench/v1/services**) and use _Make_ to install the backend services.
 ``` Shell
 make
 ```
@@ -46,5 +46,17 @@ start-semantic-workbench-service
 ```
 
 ## Step 2: Setup of Semantic Workbench's frontend
+1. _Node.js_ is a JavaScript runtime used for building and running the frontend. Install **Node.js v20** using Scoop.
+``` Shell
+scoop install nodejs-lts
+```
+2. Navigate to the frontend directory (**semantic-workbench/v1/app**) and install the necessary dependencies using _npm_ (Node Package Manager).
+``` Shell
+npm install
+```
+9.	Start the frontend service to make it operational.
+``` Shell
+npm start
+```
 
 ## Step 3: Deployment of LangGraph arXiv assistant
