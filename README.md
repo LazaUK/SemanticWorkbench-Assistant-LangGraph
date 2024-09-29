@@ -2,7 +2,7 @@
 
 [Semantic Workbench](https://github.com/microsoft/semanticworkbench) is an open-source platform developed by Microsoft, designed to simplify the prototyping and development of intelligent assistants. It consists of a _backend service_, a _frontend user interface_ (UI) and multiple _assistant services_. The platform is highly adaptable and can support wide range of use cases from research to business applications and collaborative development.
 
-This GitHub repo provides a step-by-step guide on building and deploying a LangGraph-based assistant within the Semantic Workbench environment. It includes code samples, explanations of some key concepts and demonstrates a specific use case implementation, i.e searching for and analysing arXiv publications to assist with a research process.
+This GitHub repo provides a step-by-step guide on building and deploying a LangGraph-based assistant within the Semantic Workbench environment. It includes code samples, explanations of some key concepts and demonstrates a specific use case implementation, i.e. searching for and analysing arXiv publications to assist with a research process.
 
 > [!NOTE]
 > This step-by-step guide assumes that you have cloned the source code of Semantic Workbench **_v1_** from its official repo (https://github.com/microsoft/semanticworkbench) and are using it on a Windows 11 machine.
@@ -11,7 +11,7 @@ This GitHub repo provides a step-by-step guide on building and deploying a LangG
 - [Step 1: Setup of Semantic Workbench's backend](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-1-setup-of-semantic-workbenchs-backend)
 - [Step 2: Setup of Semantic Workbench's frontend](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-2-setup-of-semantic-workbenchs-frontend)
 - [Step 3: Deployment of LangGraph arXiv assistant](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-3-deployment-of-langgraph-arxiv-assistant)
-- [Appendix A: LangGraph assistant's business logic](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#appendix-a-langgraph-assistants-business-logic)
+- [Appendix A: LangGraph assistant's business logic](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#appendix-a-langgraph-assistants-system-logic)
 - [Appendix B: LangGraph assistant's working demo](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#appendix-b-langgraph-assistants-working-demo)
 
 ## Step 1: Setup of Semantic Workbench's backend
@@ -69,7 +69,7 @@ npm start
 ``` PowerShell
 poetry install
 ```
-3. Set the following 4 environment variables.
+3. Set the following 5 environment variables.
 
 | Environment Variable | Description |
 | --- | --- |
@@ -83,7 +83,7 @@ poetry install
 poetry run start-semantic-workbench-assistant assistant.chat:app --port 3002
 ```
 
-## Appendix A: LangGraph assistant's business logic
+## Appendix A: LangGraph assistant's system logic
 1. LangGraph arXiv assistant consists of 3 nodes: "_supervisor_", "_web_searcher_" and "_arxiv_analyser_".
 ``` Python
 workflow = StateGraph(AgentState)
