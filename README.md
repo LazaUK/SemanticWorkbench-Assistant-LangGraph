@@ -77,6 +77,12 @@ workflow.add_node("supervisor", supervisor_agent)
 ```
 2. **Supervisor** node receives user's request and coordinates its processing with other nodes.
 ``` Python
+def supervisor_agent(state):
+    supervisor_chain = (
+        prompt | llm.with_structured_output(routeResponse)
+    )
+    return supervisor_chain.invoke(state)
+...
 workflow.add_edge(START, "supervisor")
 ```
 > [!NOTE]
