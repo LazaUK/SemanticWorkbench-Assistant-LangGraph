@@ -61,3 +61,5 @@ npm start
 ```
 
 ## Step 3: Deployment of LangGraph arXiv assistant
+
+![LangGraph_nodes](/images/LangGraph_visual.jpeg)
