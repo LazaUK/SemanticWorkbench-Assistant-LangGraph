@@ -11,7 +11,7 @@ This GitHub repo provides a step-by-step guide on building and deploying a LangG
 - [Step 1: Setup of Semantic Workbench's backend](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-1-setup-of-semantic-workbenchs-backend)
 - [Step 2: Setup of Semantic Workbench's frontend](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-2-setup-of-semantic-workbenchs-frontend)
 - [Step 3: Deployment of LangGraph arXiv assistant](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-3-deployment-of-langgraph-arxiv-assistant)
-- [Appendix A: LangGraph assistant's business logic](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#appendix-a-langgraph-assistants-system-logic)
+- [Appendix A: LangGraph assistant's system logic](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#appendix-a-langgraph-assistants-system-logic)
 - [Appendix B: LangGraph assistant's working demo](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#appendix-b-langgraph-assistants-working-demo)
 
 ## Step 1: Setup of Semantic Workbench's backend
