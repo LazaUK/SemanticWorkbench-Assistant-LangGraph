@@ -36,7 +36,7 @@ scoop install python311
 scoop install poetry
 scoop install make
 ```
-5. Navigate to the backend directory (**_semantic-workbench/v1/services_**) and use _Make_ to install the backend services.
+5. Navigate to the backend directory (```semantic-workbench/v1/services```) and use _Make_ to install the backend services.
 ``` PowerShell
 make
 ```
@@ -54,7 +54,7 @@ start-semantic-workbench-service
 ``` PowerShell
 scoop install nodejs-lts
 ```
-2. Navigate to the frontend directory (**_semantic-workbench/v1/app_**) and install the necessary dependencies using _npm_ (Node Package Manager).
+2. Navigate to the frontend directory (```semantic-workbench/v1/app```) and install the necessary dependencies using _npm_ (Node Package Manager).
 ``` PowerShell
 npm install
 ```
@@ -64,8 +64,23 @@ npm start
 ```
 
 ## Step 3: Deployment of LangGraph arXiv assistant
-1. Copy content of provided _assistants_ folder to the root of folder of your Semantic Workbench installation.
-
+1. Copy content of provided _assistants_ directory to the root of your Semantic Workbench installation. If you will change the directory name / structure, then adjust relevant values in ```assistant.code-workspace``` file.
+2. Navigate to the assistant's directory (```semantic-workbench/v1/app```) and install the necessary dependencies using _poetry_.
+``` PowerShell
+poetry install
+```
+3. Set the following 4 environment variables.
+| Environment Variable | Description |
+| --- | --- |
+| _AZURE_OPENAI_API_BASE_ | Azure OpenAI endpoint |
+| _AZURE_OPENAI_API_KEY_ | Azure OpenAI API key |
+| _AZURE_OPENAI_API_VERSION_ | Azure OpenAI API version |
+| _AZURE_OPENAI_API_DEPLOY_ | Azure OpenAI deployment name |
+| _TAVILY_API_KEY_ | Tavily API key |
+4. Start the assistant service to make it operational.
+``` PowerShell
+poetry run start-semantic-workbench-assistant assistant.chat:app --port 3002
+```
 
 ## Appendix A: LangGraph assistant's business logic
 1. LangGraph arXiv assistant consists of 3 nodes: "_supervisor_", "_web_searcher_" and "_arxiv_analyser_".
