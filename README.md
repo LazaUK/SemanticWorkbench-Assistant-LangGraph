@@ -10,8 +10,8 @@ My GitHub repo provides a step-by-step guide on building and deploying a LangGra
 - [Step 1: Setup of Semantic Workbench's backend](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-1-setup-of-semantic-workbenchs-backend)
 - [Step 2: Setup of Semantic Workbench's frontend](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-2-setup-of-semantic-workbenchs-frontend)
 - [Step 3: Deployment of LangGraph arXiv assistant](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-3-deployment-of-langgraph-arxiv-assistant)
-- [Appendix A: Assistant's business logic]()
-- [Appendix B: Assistant's working example]()
+- [Appendix A: LangGraph assistant's business logic]()
+- [Appendix B: LangGraph assistant's working demo]()
 
 ## Step 1: Setup of Semantic Workbench's backend
 1. Ensure that your Windows 11's _execution policies_ are set correctly to allow the installation of necessary tools.
@@ -66,7 +66,20 @@ npm start
 1. Copy content of provided _assistants_ folder to the root of folder of your Semantic Workbench installation.
 
 
-## Appendix A: Assistant's business logic
+## Appendix A: LangGraph assistant's business logic
+1. LangGraph arXiv assistant consists of 3 nodes: "_supervisor_", "_web_searcher_" and "_arxiv_analyser_".
+``` Python
+workflow = StateGraph(AgentState)
+workflow.add_node("web_searcher", web_node)
+workflow.add_node("arxiv_analyser", arxiv_node)
+workflow.add_node("supervisor", supervisor_agent)
+```
+2. **Supervisor** node receives user's message and coordinates its processing with other nodes.
+``` Python
+workflow.add_edge(START, "supervisor")
+```  
+3. 
 ![LangGraph_nodes](/images/LangGraph_visual.jpeg)
 
-## Appendix B: Assistant's working example
+## Appendix B: LangGraph assistant's working demo
+Demo video of LangGraph arXiv assistant's use in Semantic Workbench's UI can be found here: [LINK TO YOUTUBE VIDEO TO BE ADDED LATER]().
