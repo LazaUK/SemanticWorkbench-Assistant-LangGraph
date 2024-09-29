@@ -70,6 +70,7 @@ npm start
 poetry install
 ```
 3. Set the following 4 environment variables.
+
 | Environment Variable | Description |
 | --- | --- |
 | _AZURE_OPENAI_API_BASE_ | Azure OpenAI endpoint |
