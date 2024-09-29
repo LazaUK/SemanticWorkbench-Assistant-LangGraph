@@ -2,7 +2,7 @@
 
 [Semantic Workbench](https://github.com/microsoft/semanticworkbench) is an open-source platform developed by Microsoft, designed to simplify the prototyping and development of intelligent assistants. It consists of a _backend service_, a _frontend user interface_ (UI) and multiple _assistant services_. The platform is highly adaptable and can support wide range of use cases from research to business applications and collaborative development.
 
-My GitHub repo provides a step-by-step guide on building and deploying a LangGraph-based assistant within the Semantic Workbench environment. It includes code examples and explanations of some key concepts. LangGraph-based assistant example demonstrates a specific use case: searching for and analysing arXiv publications to support the research process.
+This GitHub repo provides a step-by-step guide on building and deploying a LangGraph-based assistant within the Semantic Workbench environment. It includes code samples, explanations of some key concepts and demonstrates a specific use case implementation, i.e searching for and analysing arXiv publications to assist with a research process.
 
 > [!NOTE]
 > This step-by-step guide assumes that you have cloned the source code of Semantic Workbench **_v1_** from its official repo (https://github.com/microsoft/semanticworkbench) and using it on a Windows 11 machine.
