@@ -61,5 +61,6 @@ npm start
 ```
 
 ## Step 3: Deployment of LangGraph arXiv assistant
-
+1. Copy content of provided _assistants_ folder to the root of folder of your Semantic Workbench installation.
+2. 
 ![LangGraph_nodes](/images/LangGraph_visual.jpeg)
