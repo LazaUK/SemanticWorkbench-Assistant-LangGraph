@@ -4,7 +4,8 @@
 
 My GitHub repo provides a step-by-step guide on building and deploying a LangGraph-based assistant within the Semantic Workbench environment. It includes code examples and explanations of some key concepts. LangGraph-based assistant example demonstrates a specific use case: searching for and analysing arXiv publications to support the research process.
 
-> Note: This step-by-step guide assumes that you have cloned the source code of Semantic Workbench **_v1_** from its official repo (https://github.com/microsoft/semanticworkbench) and using it on a Windows 11 machine.
+> [!NOTE]
+> This step-by-step guide assumes that you have cloned the source code of Semantic Workbench **_v1_** from its official repo (https://github.com/microsoft/semanticworkbench) and using it on a Windows 11 machine.
 
 ## Table of contents:
 - [Step 1: Setup of Semantic Workbench's backend](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-1-setup-of-semantic-workbenchs-backend)
@@ -79,19 +80,19 @@ workflow.add_node("supervisor", supervisor_agent)
 workflow.add_edge(START, "supervisor")
 ```
 > [!NOTE]
-> _Supervisor node's system prompt_: "You are a supervisor tasked with managing a conversation between the following workers: 'web_searcher', 'arxiv_analyser'. Given the following user request, respond with the worker to act next. Each worker will perform a task and respond with their results and status. When finished, respond with FINISH."
+> **Supervisor node's system prompt**: "_You are a supervisor tasked with managing a conversation between the following workers: 'web_searcher', 'arxiv_analyser'. Given the following user request, respond with the worker to act next. Each worker will perform a task and respond with their results and status. When finished, respond with FINISH._"
 3. **Web Searcher** node is equipped with a search tool, powered by Tavily. It will search Internet on the research topic shared by **Supervisor** and return references to their publications in arXiv.
 ``` Python
 tools=[tavily_tool]
 ```
 > [!NOTE]
-> _Web Searcher node's system prompt_: "You are a web search expert. You will search the web for the latest Arxiv references on the topic, and return only the Arxiv references codes."
+> **Web Searcher node's system prompt**: "_You are a web search expert. You will search the web for the latest Arxiv references on the topic, and return only the Arxiv references codes._"
 4. **arXiv Analyser** node is equipped with LangGraph' arXiv tool. It will use arXiv reference numbers shared by **Supervisor** to extract publication date, authors and research brief's details. 
 ``` Python
 tools=[arxiv_tool]
 ```
 > [!NOTE]
-> _arXiv Analyser node's system prompt_: "You are a specialist Arxiv analyzer. You will summarise found Arxiv papers, to advise when and by whom they were published, and what they are about."
+> **arXiv Analyser node's system prompt**: "_You are a specialist Arxiv analyzer. You will summarise found Arxiv papers, to advise when and by whom they were published, and what they are about._"
 5. Visual representation of LangGraph arXiv assistant's nodes and edges is shown on the graph image below.
 ![LangGraph_nodes](/images/LangGraph_visual.jpeg)
 
