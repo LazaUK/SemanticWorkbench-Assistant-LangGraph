@@ -78,7 +78,7 @@ poetry install
 | _AZURE_OPENAI_API_VERSION_ | Azure OpenAI API version |
 | _AZURE_OPENAI_API_DEPLOY_ | Azure OpenAI deployment name |
 | _TAVILY_API_KEY_ | Tavily API key |
-4. Start the assistant service to make it operational.
+4. Start the assistant service to make it operational. You can customise the service's port number if needed.
 ``` PowerShell
 poetry run start-semantic-workbench-assistant assistant.chat:app --port 3002
 ```
