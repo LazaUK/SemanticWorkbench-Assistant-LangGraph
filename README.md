@@ -5,7 +5,7 @@
 This GitHub repo provides a step-by-step guide on building and deploying a LangGraph-based assistant within the Semantic Workbench environment. It includes code samples, explanations of some key concepts and demonstrates a specific use case implementation, i.e searching for and analysing arXiv publications to assist with a research process.
 
 > [!NOTE]
-> This step-by-step guide assumes that you have cloned the source code of Semantic Workbench **_v1_** from its official repo (https://github.com/microsoft/semanticworkbench) and using it on a Windows 11 machine.
+> This step-by-step guide assumes that you have cloned the source code of Semantic Workbench **_v1_** from its official repo (https://github.com/microsoft/semanticworkbench) and are using it on a Windows 11 machine.
 
 ## Table of contents:
 - [Step 1: Setup of Semantic Workbench's backend](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-1-setup-of-semantic-workbenchs-backend)
@@ -64,7 +64,7 @@ npm start
 ```
 
 ## Step 3: Deployment of LangGraph arXiv assistant
-1. Copy content of provided _assistants_ directory to the root of your Semantic Workbench installation. If you will change the directory name / structure, then adjust relevant values in ```assistant.code-workspace``` file.
+1. Copy the content of the provided _assistants_ directory to the root directory of your Semantic Workbench installation. If you plan to change the directory name or structure, you'll need to adjust the relevant values in the ```assistant.code-workspace``` file.
 2. Navigate to the assistant's directory (```semantic-workbench/v1/app```) and install the necessary dependencies using _poetry_.
 ``` PowerShell
 poetry install
@@ -131,4 +131,4 @@ arxiv_agent = create_react_agent(
 ![LangGraph_nodes](/images/LangGraph_visual.jpeg)
 
 ## Appendix B: LangGraph assistant's working demo
-Demo video of LangGraph arXiv assistant's use in Semantic Workbench's UI can be found here: [LINK TO YOUTUBE VIDEO TO BE ADDED LATER]().
+A demo video showcasing the LangGraph arXiv assistant in action within the Semantic Workbench UI can be found here: [LINK TO YOUTUBE VIDEO TO BE ADDED LATER]().
