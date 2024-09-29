@@ -83,13 +83,25 @@ workflow.add_edge(START, "supervisor")
 > **Supervisor node's system prompt**: "_You are a supervisor tasked with managing a conversation between the following workers: 'web_searcher', 'arxiv_analyser'. Given the following user request, respond with the worker to act next. Each worker will perform a task and respond with their results and status. When finished, respond with FINISH._"
 3. **Web Searcher** node is equipped with a search tool, powered by Tavily. It will search Internet on the research topic shared by **Supervisor** and return references to their publications in arXiv.
 ``` Python
-tools=[tavily_tool]
+tavily_tool = TavilySearchResults(max_results=5)
+...
+web_agent = create_react_agent(
+    llm,
+    tools=[tavily_tool],
+    state_modifier="<YOUR_SYSTEM_PROMPT>"
+)
 ```
 > [!NOTE]
 > **Web Searcher node's system prompt**: "_You are a web search expert. You will search the web for the latest Arxiv references on the topic, and return only the Arxiv references codes._"
 4. **arXiv Analyser** node is equipped with LangGraph' arXiv tool. It will use arXiv reference numbers shared by **Supervisor** to extract publication date, authors and research brief's details. 
 ``` Python
-tools=[arxiv_tool]
+arxiv_tool = ArxivQueryRun()
+...
+arxiv_agent = create_react_agent(
+    llm,
+    tools=[arxiv_tool],
+    state_modifier="<YOUR_SYSTEM_PROMPT>"
+)
 ```
 > [!NOTE]
 > **arXiv Analyser node's system prompt**: "_You are a specialist Arxiv analyzer. You will summarise found Arxiv papers, to advise when and by whom they were published, and what they are about._"
