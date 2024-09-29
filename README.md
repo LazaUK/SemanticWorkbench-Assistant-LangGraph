@@ -10,6 +10,8 @@ My GitHub repo provides a step-by-step guide on building and deploying a LangGra
 - [Step 1: Setup of Semantic Workbench's backend](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-1-setup-of-semantic-workbenchs-backend)
 - [Step 2: Setup of Semantic Workbench's frontend](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-2-setup-of-semantic-workbenchs-frontend)
 - [Step 3: Deployment of LangGraph arXiv assistant](https://github.com/LazaUK/SemanticWorkbench-Assistant-LangGraph#step-3-deployment-of-langgraph-arxiv-assistant)
+- [Appendix A: Assistant's business logic]()
+- [Appendix B: Assistant's working example]()
 
 ## Step 1: Setup of Semantic Workbench's backend
 1. Ensure that your Windows 11's _execution policies_ are set correctly to allow the installation of necessary tools.
@@ -62,5 +64,9 @@ npm start
 
 ## Step 3: Deployment of LangGraph arXiv assistant
 1. Copy content of provided _assistants_ folder to the root of folder of your Semantic Workbench installation.
-2. 
+
+
+## Appendix A: Assistant's business logic
 ![LangGraph_nodes](/images/LangGraph_visual.jpeg)
+
+## Appendix B: Assistant's working example
